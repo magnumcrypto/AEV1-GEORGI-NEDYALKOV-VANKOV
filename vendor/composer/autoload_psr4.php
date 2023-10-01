@@ -10,5 +10,5 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Config\\' => array($baseDir . '/config'),
-    'AP31\\' => array($baseDir . '/src'),
+    'AEV1\\' => array($baseDir . '/src'),
 );
