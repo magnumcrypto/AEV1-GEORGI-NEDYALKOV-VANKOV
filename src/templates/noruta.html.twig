@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block  content %}
+    <body id="page1">
+		<div class="tail-top">
+			<div class="tail-bottom">
+				<div
+					class="body-bg">
+					<!-- HEADER -->
+					<div id="header">
+						<div class="extra"><img src="images/header-img.jpg" alt=""/></div>
+						<div class="row-1">
+							<div class="fleft">
+								<h1>
+									<a id="first-title" href="#">GEORGI PACKAGES</a>
+								</h1>
+							</div>
+							<div class="fright"><img src="images/phone.gif" alt=""/></div>
+						</div>
+						<div class="row-2">
+							<ul>
+								<li class="m1">
+									<a href="index.html" class="active">Home</a>
+								</li>
+							</ul>
+						</div>
+						<div class="row-3">
+							<h2>{{title}}</h2>
+						</div>
+					</div>
+					<!-- CONTENT -->
+					<div id="content">
+						<div class="inner_copy">More
+							<a href="#">Website Templates</a>
+							@ Templates.com!</div>
+						<div class="tail-right">
+							<div class="wrapper">
+								<div class="col-1">
+									<div class="indent">
+										<div class="indent1">
+											<h3>{{ description }}</h3>
+										</div>
+									</div>
+								</div>
+                                <div class="col-2">
+									<ul>
+										<li>
+											<strong>
+												<a href="#">{{ fecha_actual|date('d/m/Y') }}</a>
+											</strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</li>
+										<li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+{% endblock %}

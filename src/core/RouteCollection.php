@@ -18,6 +18,7 @@ class RouteCollection implements IRoute
     }
 
     //getter que nos devolvera los datos en forma de array de todas las rutas
+    //metodo obligatorio dle interfaz
     public function getRoutes(): array
     {
         return $this->routes;
