@@ -12,7 +12,6 @@ class NoRuta extends AbstractController
     {
         //Obtenemos la fecha y la hora actual
         $fecha = date("d-m-y H:i:s");
-
         //Ahora usamos el método extendido del AbstractController render para lanzar
         //la plantilla de twig con los parámetros necesarios
         $this->render(

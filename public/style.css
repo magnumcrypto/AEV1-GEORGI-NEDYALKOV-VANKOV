@@ -118,7 +118,9 @@ h2 {
 }
 
 .fright {
-    float: right
+    float: right;
+    color: white;
+    font-size: 14px;
 }
 
 .clear {

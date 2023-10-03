@@ -1,12 +1,11 @@
 <?php
 
 declare(strict_types=1);
+require_once "../vendor/autoload.php";
 
 use AEV1\Core\Dispatcher;
 use AEV1\Core\Request;
 use AEV1\Core\RouteCollection;
-
-require_once "../vendor/autoload.php";
 
 //Instanciamos el objeto que contendrá todas las rutas predefinidas
 $routes = new RouteCollection();
