@@ -562,10 +562,13 @@ table {
     width: 500px;
 }
 
+<<<<<<< HEAD
 .div-clientes {
     width: 1200px;
 }
 
+=======
+>>>>>>> c2ed1433718220d14796662aab0b8c3cbe2fdc97
 th {
     background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
     border-left: 1px solid #555;
