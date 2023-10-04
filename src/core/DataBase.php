@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace AEV1\Core\Interfaces;
+namespace AEV1\Core;
 
 use AEV1\Core\Interfaces\IDataBase;
 //Clase que gestiona la conexión a la BBDD e implementa la interfaz IDataBase
-class DataBase extends IDataBase
+class DataBase implements IDataBase
 {
     private static array $dbConfig;
     private static \mysqli $conn;
