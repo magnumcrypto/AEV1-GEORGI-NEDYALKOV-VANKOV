@@ -6,12 +6,9 @@
     "/listaProductos": {
         "controller": "ProductosController",
         "action": "listadoProductos"
-<<<<<<< HEAD
     },
     "/listaClientes": {
         "controller": "ClientesController",
         "action": "listadoClientes"
-=======
->>>>>>> c2ed1433718220d14796662aab0b8c3cbe2fdc97
     }
 }
