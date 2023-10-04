@@ -1,0 +1,54 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+					<!-- CONTENT -->
+					<div id="content">
+						<div class="inner_copy">More
+							<a href="#">Website Templates</a>
+							@ Templates.com!</div>
+						<div class="div-clientes">
+							<div class="wrapper">
+								<div class="col-1">
+									<div class="indent">
+										<div class="indent1">
+											<h3>{{ title }}</h3>
+												<table class="clientes-table">
+    												<thead>
+            												<tr>
+                												<th>Nombre</th>
+                												<th>Dirección</th>
+                												<th>Ciudad</th>
+                												<th>Estado</th>
+                												<th>Cod. postal</th>
+                												<th>Area</th>
+                												<th>Teléfono</th>
+                												<th>Perp. Cod.</th>
+                												<th>Limite credito</th>
+                												<th>Observaciones</th>
+            												</tr>
+        											</thead>
+        											<tbody>
+                                                    {% for cliente in clientes %}
+            											    <tr>
+            											        <td>{{ cliente.CLIENTE_COD  }}</td>
+            											        <td>{{ cliente.NOMBRE  }}</td>
+            											        <td>{{ cliente.DIREC  }}</td>
+            											        <td>{{ cliente.CIUDAD  }}</td>
+            											        <td>{{ cliente.ESTADO  }}</td>
+            											        <td>{{ cliente.COD_POSTAL }}</td>
+            											        <td>{{ cliente.AREA  }}</td>
+            											        <td>{{ cliente.REPR_COD  }}</td>
+                                                                {# € #}
+            											        <td>{{ cliente.LIMITE_CREDITO }}</td>
+            											        <td>{{ cliente.OBSERVACIONES  }}</td>
+            											    </tr>
+            											{% endfor %}
+        											</tbody>
+    											</table>
+												
+										</div>
+									</div>
+								</div>
+								<div class="col-2">
+									</ul>
+{% endblock %}    

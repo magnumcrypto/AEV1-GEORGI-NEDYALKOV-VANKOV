@@ -1,0 +1,44 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+					<!-- CONTENT -->
+					<div id="content">
+						<div class="inner_copy">More
+							<a href="#">Website Templates</a>
+							@ Templates.com!</div>
+						<div class="tail-right">
+							<div class="wrapper">
+								<div class="col-1">
+									<div class="indent">
+										<div class="indent1">
+											<h3>{{ title }}</h3>
+												<table class="fixed_headers">
+    												<thead>
+            												<tr>
+                												<th>Numero Producto</th>
+                												<th>Descripción</th>
+            												</tr>
+        											</thead>
+        											<tbody>
+            											{% for producto in productos %}
+            											    <tr>
+            											        <td>{{ producto.PROD_NUM }}</td>
+            											        <td>{{ producto.DESCRIPCION }}</td>
+            											    </tr>
+            											{% endfor %}
+        											</tbody>
+    											</table>
+												
+										</div>
+									</div>
+								</div>
+								<div class="col-2">
+									<ul>
+										<li>
+											<strong>
+												<a href="#">{{fecha_actual|date('d/m/Y') }}</a>
+												<a href="#">{{fecha_actual|date('H:i:s') }}</a>
+											</strong>Actualizamos siempre la fecha actual!.
+                                        </li>
+									</ul>
+{% endblock %}    

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace AEV1\Core;
 
 use Twig\Environment;
-
 //Clase abstracta que nos permite extender de ella para crear cualquier controller
 //en nuestra aplicación
 //Es nuestro controlador padre

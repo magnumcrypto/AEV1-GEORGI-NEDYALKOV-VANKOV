@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+{% block layout %}
+<body id="page1">
+		<div class="tail-top">
+			<div class="tail-bottom">
+				<div
+					class="body-bg">
+                    <!-- HEADER -->
+					<div id="header">
+						<div class="extra"><img src="images/header-img.jpg" alt=""/></div>
+						<div class="row-1">
+							<div class="fleft">
+								<h1>
+									<a id="first-title" href="/">{{title_first_page}}</a>
+								</h1>
+							</div>
+							<p class="fright"><img src="" alt=""/>geneva@floridauniversitaria.es</p>
+						</div>
+						<div class="row-2">
+							<ul>
+								<li class="m1">
+									<a href="/" class="active">Home</a>
+								</li>
+								<li class="m2">
+									<a href="/listaProductos">Productos</a>
+								</li>
+								<li class="m3">
+									<a href="/listaClientes">Clientes</a>
+								</li>
+								<li class="m4">
+									<a href="support.html">Support</a>
+								</li>
+								<li class="m5">
+									<a href="contact-us.html">contacts</a>
+								</li>
+								<li class="m6">
+									<a href="sitemap.html">Sitemap</a>
+								</li>
+							</ul>
+						</div>
+						<div class="row-3">
+							<h2>Las mejores soluciones</h2>
+						</div>
+					</div>
+                    {% block content %}
+                    {% endblock %}
+					
+                </div>
+			</div>
+		</div>
+</div>
+{% endblock %}

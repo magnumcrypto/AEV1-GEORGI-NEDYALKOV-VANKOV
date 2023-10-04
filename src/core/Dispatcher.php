@@ -30,9 +30,10 @@ class Dispatcher
     {
         //Verificamos que la ruta que hemos recibido está dentro de las rutas de la app
         if (isset($this->routeList[$this->currentRequest->getRoute()])) {
+
             //Instanciará el controlador que sea necesario según se solicite
             $controllerClass = "AEV1\\Controllers\\" . $this->routeList[$this->currentRequest->getRoute()]["controller"];
-
+            var_dump($controllerClass);
             //Esto sera equivalente a las acciones de cada controlador (main,detail,etc.)
             $action = $this->routeList[$this->currentRequest->getRoute()]["action"];
         } else {
