@@ -15,6 +15,6 @@ Actividad Evaluable 1 - Desarrollo Web en Entorno Servidor: Georgi Nedyalkov Van
 $ composer require twig/intl-extra
 $ composer require twig/extra-bundle
 -Para poder usar algunos filtros-Para poder usar algunos filtros
-=======
--Hemos añadido .htaccess para siempre dirigir las peticiones a index para poder gestionarlo de forma mas segura
->>>>>>> c2ed1433718220d14796662aab0b8c3cbe2fdc97
+
+## Extendemos en cada plantilla
+-En cada plantilla también extenderemos el blocke navmenu para que se quede marcado donde estamos en cada momento
