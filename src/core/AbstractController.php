@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace AEV1\Core;
 
 use Twig\Environment;
+use Twig\Extra\Intl\IntlExtension;
+
 //Clase abstracta que nos permite extender de ella para crear cualquier controller
 //en nuestra aplicación
 //Es nuestro controlador padre
@@ -18,6 +20,7 @@ abstract class AbstractController
         //estas dos lineas nos indica la documentación de Twig que debemos añadirlas para poder usarlo en cada controller
         $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . "/../templates");
         $this->twig = new \Twig\Environment($loader);
+        $this->twig->addExtension(new IntlExtension());
         //Esta linea nos sirve para poder declarar una variable global desde PHP a TWIG
         //En este caso pasamos el nombre del servidor, pero podria ser cualquier variable PHP.
         //Generalmente se usa para las cookies y datos de sesión de usuarios

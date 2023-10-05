@@ -21,7 +21,7 @@ class ProductosController extends AbstractController
             "productos.html.twig",
             [
                 'title_first_page' => 'GEORGI PACKAGES',
-                'title' => 'Lista de todos los productos',
+                'title' => 'Lista de todos los PRODUCTOS',
                 'productos' => $productos->getAllProducts()
             ]
         );

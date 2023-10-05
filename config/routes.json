@@ -10,5 +10,13 @@
     "/listaClientes": {
         "controller": "ClientesController",
         "action": "listadoClientes"
+    },
+    "/detalleCliente": {
+        "controller": "ClientesController",
+        "action": "detalleClientes"
+    },
+    "/departamentos": {
+        "controller": "DepartamentosController",
+        "action": "listadoDepartamentos"
     }
 }

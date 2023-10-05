@@ -10,10 +10,10 @@
 									<a href="/listaProductos">Productos</a>
 								</li>
 								<li class="m3">
-									<a href="/listaClientes" class="active">Clientes</a>
+									<a href="/listaClientes">Clientes</a>
 								</li>
 								<li class="m4">
-									<a href="/departamentos">Departamentos</a>
+									<a href="/departamentos" class="active">Departamentos</a>
 								</li>
 								<li class="m5">
 									<a href="contact-us.html">contacts</a>
@@ -39,17 +39,19 @@
 												<table class="clientes-table">
     												<thead>
             												<tr>
-                												<th>Código cliente</th>
-                												<th>Nombre</th>
-                												<th>Dirección</th>
+                												<th>Número Departamento</th>
+                												<th>Nombre Departamento</th>
+                												<th>Localización</th>
+                												<th>Color</th>
             												</tr>
         											</thead>
         											<tbody>
-                                                    {% for cliente in clientes %}
+                                                    {% for departamento in departamentos %}
             											    <tr>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.CLIENTE_COD  }}</a></td>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.NOMBRE  }}</a></td>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.DIREC  }}</a></td>
+            											        <td>{{ departamento.DEPT_NO  }}</td>
+            											        <td>{{ departamento.DNOMBRE  }}</td>
+            											        <td>{{ departamento.LOC  }}</td>
+            											        <td>{{ departamento.color|capitalize }}</td>
             											    </tr>
             											{% endfor %}
         											</tbody>
@@ -60,7 +62,7 @@
 								</div>
 								<div class="col-2">
 									</ul>
-								<div class="col-2">
+                                <div class="col-2">
 									<ul>
 										<li>
 											<strong>

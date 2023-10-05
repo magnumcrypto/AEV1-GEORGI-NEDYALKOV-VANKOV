@@ -6,20 +6,8 @@
 								<li class="m1">
 									<a href="/">Home</a>
 								</li>
-								<li class="m2">
-									<a href="/listaProductos">Productos</a>
-								</li>
 								<li class="m3">
-									<a href="/listaClientes" class="active">Clientes</a>
-								</li>
-								<li class="m4">
-									<a href="/departamentos">Departamentos</a>
-								</li>
-								<li class="m5">
-									<a href="contact-us.html">contacts</a>
-								</li>
-								<li class="m6">
-									<a href="sitemap.html">Sitemap</a>
+									<a href="/listaClientes">Volver a clientes</a>
 								</li>
 							</ul>
 						</div>
@@ -35,21 +23,37 @@
 								<div class="col-1">
 									<div class="indent">
 										<div class="indent1">
-											<h3>{{ title }}</h3>
+										{% for cliente in clientes %}
+											<h3>{{ title }} {{ cliente.NOMBRE}}</h3>
+										{% endfor %}
 												<table class="clientes-table">
     												<thead>
             												<tr>
                 												<th>Código cliente</th>
                 												<th>Nombre</th>
                 												<th>Dirección</th>
+                												<th>Ciudad</th>
+                												<th>Estado</th>
+                												<th>Código postal</th>
+                												<th>Área</th>
+                												<th>Código repartidor</th>
+                												<th>Limite credito</th>
+                												<th>Observaciones</th>
             												</tr>
         											</thead>
         											<tbody>
                                                     {% for cliente in clientes %}
             											    <tr>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.CLIENTE_COD  }}</a></td>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.NOMBRE  }}</a></td>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.DIREC  }}</a></td>
+            											        <td>{{ cliente.CLIENTE_COD  }}</td>
+            											        <td>{{ cliente.NOMBRE  }}</td>
+            											        <td>{{ cliente.DIREC  }}</td>
+            											        <td>{{ cliente.CIUDAD  }}</td>
+            											        <td>{{ cliente.ESTADO  }}</td>
+            											        <td>{{ cliente.COD_POSTAL }}</td>
+            											        <td>{{ cliente.AREA  }}</td>
+            											        <td>{{ cliente.REPR_COD  }}</td>
+            											        <td>{{ cliente.LIMITE_CREDITO|format_currency('EUR') }}</td>
+            											        <td>{{ cliente.OBSERVACIONES  }}</td>
             											    </tr>
             											{% endfor %}
         											</tbody>
@@ -60,13 +64,4 @@
 								</div>
 								<div class="col-2">
 									</ul>
-								<div class="col-2">
-									<ul>
-										<li>
-											<strong>
-												<a href="#">{{fecha_actual|date('d/m/Y') }}</a>
-												<a href="#">{{fecha_actual|date('H:i:s') }}</a>
-											</strong>Actualizamos siempre la fecha actual!.
-                                        </li>
-									</ul>
-{% endblock %}    
+{% endblock %}   

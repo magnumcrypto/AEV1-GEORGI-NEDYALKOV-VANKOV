@@ -24,4 +24,14 @@ class Clientes
         //Lanzamos la query
         return $db->executeSQL($sql);
     }
+
+    public function getClienteById(int $id): array
+    {
+        //hacemos la query a la BBDD
+        $sql = "SELECT * FROM cliente WHERE cliente.CLIENTE_COD = $id";
+        //Instanciamos la clase DataBase y a su metodo getInstance
+        $db = DataBase::getInstance();
+        //Lanzamos la query
+        return $db->executeSQL($sql);
+    }
 }

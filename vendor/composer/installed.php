@@ -3,7 +3,7 @@
         'name' => 'aev1-daw-dwes/georgi-nedyalkov-vankov',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c2ed1433718220d14796662aab0b8c3cbe2fdc97',
+        'reference' => '4e9c63fa2dd5c5a5953b26192293b3ff8e75b482',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'aev1-daw-dwes/georgi-nedyalkov-vankov' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c2ed1433718220d14796662aab0b8c3cbe2fdc97',
+            'reference' => '4e9c63fa2dd5c5a5953b26192293b3ff8e75b482',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
