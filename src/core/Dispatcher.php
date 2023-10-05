@@ -33,7 +33,6 @@ class Dispatcher
 
             //Instanciará el controlador que sea necesario según se solicite
             $controllerClass = "AEV1\\Controllers\\" . $this->routeList[$this->currentRequest->getRoute()]["controller"];
-            var_dump($controllerClass);
             //Esto sera equivalente a las acciones de cada controlador (main,detail,etc.)
             $action = $this->routeList[$this->currentRequest->getRoute()]["action"];
         } else {
@@ -46,7 +45,7 @@ class Dispatcher
         //Comprobamos que se han enviado o no parámetros por la ruta y lanzamos la accion del controller
         //Si no hay parámetros son null
         (!is_null($this->currentRequest->getParams())) ? $params = $this->currentRequest->getParams() : $params = null;
-
+        var_dump($params);
         //Instanciamos el controlador que toca
         $controller = new $controllerClass();
         //Ahora ejecutamos el método asociado a la ruta y le pasamos los parámetros

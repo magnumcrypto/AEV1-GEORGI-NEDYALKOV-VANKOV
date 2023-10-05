@@ -24,7 +24,6 @@
 							</ul>
 						</div>
 {% endblock %}
-
 {% block content %}
 					<!-- CONTENT -->
 					<div id="content">
@@ -55,17 +54,16 @@
         											<tbody>
                                                     {% for cliente in clientes %}
             											    <tr>
-            											        <td>{{ cliente.CLIENTE_COD  }}</td>
-            											        <td>{{ cliente.NOMBRE  }}</td>
-            											        <td>{{ cliente.DIREC  }}</td>
-            											        <td>{{ cliente.CIUDAD  }}</td>
-            											        <td>{{ cliente.ESTADO  }}</td>
-            											        <td>{{ cliente.COD_POSTAL }}</td>
-            											        <td>{{ cliente.AREA  }}</td>
-            											        <td>{{ cliente.REPR_COD  }}</td>
-                                                                {# € #}
-            											        <td>{{ cliente.LIMITE_CREDITO }}</td>
-            											        <td>{{ cliente.OBSERVACIONES  }}</td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.CLIENTE_COD  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.NOMBRE  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.DIREC  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.CIUDAD  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.ESTADO  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.COD_POSTAL }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.AREA  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.REPR_COD  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.LIMITE_CREDITO }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.OBSERVACIONES  }}</a></td>
             											    </tr>
             											{% endfor %}
         											</tbody>

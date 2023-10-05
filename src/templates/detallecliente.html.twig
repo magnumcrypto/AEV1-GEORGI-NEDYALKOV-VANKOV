@@ -1,0 +1,63 @@
+{% extends "layout.html.twig" %}
+
+{% block linkcss %}
+<link href="style.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block navmenu %}
+						<div class="row-2">
+							<ul>
+								<li class="m1">
+									<a href="/">Home</a>
+								</li>
+								<li class="m2">
+									<a href="/listaProductos">Productos</a>
+								</li>
+								<li class="m3">
+									<a href="/listaClientes">Volver a clientes</a>
+								</li>
+							</ul>
+						</div>
+{% endblock %}
+{% block content %}
+					<!-- CONTENT -->
+					<div id="content">
+						<div class="inner_copy">More
+							<a href="#">Website Templates</a>
+							@ Templates.com!</div>
+						<div class="div-clientes">
+							<div class="wrapper">
+								<div class="col-1">
+									<div class="indent">
+										<div class="indent1">
+											<h3>{{title}}</h3>
+												<table class="">
+    												<thead>
+            												<tr>
+                												<th>Número pedido</th>
+                												<th>Fecha pedido</th>
+                												<th>Tipo pedido</th>
+                												<th>Código cliente</th>
+                												<th>Fecha de envío</th>
+                												<th>Total</th>
+            												</tr>
+        											</thead>
+        											<tbody>
+                                                    {% for pedido in pedidos %}
+            											    <tr>
+            											        <td>{{ pedido.PEDIDO_NUM  }}</td>
+            											        <td>{{ pedido.PEDIDO_FECHA  }}</td>
+            											        <td>{{ pedido.PEDIDO_TIPO  }}</td>
+            											        <td>{{ pedido.CLIENTE_COD  }}</td>
+            											        <td>{{ pedido.FECHA_ENVIO }}</td>
+            											        <td>{{ pedido.TOTAL }}</td>
+            											    </tr>
+            											{% endfor %}
+        											</tbody>
+    											</table>
+												
+										</div>
+									</div>
+								</div>
+								<div class="col-2">
+									</ul>
+{% endblock %}  
