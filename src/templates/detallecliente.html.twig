@@ -1,11 +1,23 @@
 {% extends "layout.html.twig" %}
 
+<<<<<<< HEAD
+=======
+{% block linkcss %}
+<link href="style.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+>>>>>>> 8b8824eb6a0d191579b9433526a7fe4aba5b2c47
 {% block navmenu %}
 						<div class="row-2">
 							<ul>
 								<li class="m1">
 									<a href="/">Home</a>
 								</li>
+<<<<<<< HEAD
+=======
+								<li class="m2">
+									<a href="/listaProductos">Productos</a>
+								</li>
+>>>>>>> 8b8824eb6a0d191579b9433526a7fe4aba5b2c47
 								<li class="m3">
 									<a href="/listaClientes">Volver a clientes</a>
 								</li>
@@ -23,6 +35,7 @@
 								<div class="col-1">
 									<div class="indent">
 										<div class="indent1">
+<<<<<<< HEAD
 										{% for cliente in clientes %}
 											<h3>{{ title }} {{ cliente.NOMBRE}}</h3>
 										{% endfor %}
@@ -54,6 +67,29 @@
             											        <td>{{ cliente.REPR_COD  }}</td>
             											        <td>{{ cliente.LIMITE_CREDITO|format_currency('EUR') }}</td>
             											        <td>{{ cliente.OBSERVACIONES  }}</td>
+=======
+											<h3>{{title}}</h3>
+												<table class="">
+    												<thead>
+            												<tr>
+                												<th>Número pedido</th>
+                												<th>Fecha pedido</th>
+                												<th>Tipo pedido</th>
+                												<th>Código cliente</th>
+                												<th>Fecha de envío</th>
+                												<th>Total</th>
+            												</tr>
+        											</thead>
+        											<tbody>
+                                                    {% for pedido in pedidos %}
+            											    <tr>
+            											        <td>{{ pedido.PEDIDO_NUM  }}</td>
+            											        <td>{{ pedido.PEDIDO_FECHA  }}</td>
+            											        <td>{{ pedido.PEDIDO_TIPO  }}</td>
+            											        <td>{{ pedido.CLIENTE_COD  }}</td>
+            											        <td>{{ pedido.FECHA_ENVIO }}</td>
+            											        <td>{{ pedido.TOTAL }}</td>
+>>>>>>> 8b8824eb6a0d191579b9433526a7fe4aba5b2c47
             											    </tr>
             											{% endfor %}
         											</tbody>
@@ -64,4 +100,8 @@
 								</div>
 								<div class="col-2">
 									</ul>
+<<<<<<< HEAD
 {% endblock %}   
+=======
+{% endblock %}  
+>>>>>>> 8b8824eb6a0d191579b9433526a7fe4aba5b2c47
