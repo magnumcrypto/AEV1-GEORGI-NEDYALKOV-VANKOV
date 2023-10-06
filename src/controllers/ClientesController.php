@@ -31,28 +31,16 @@ class ClientesController extends AbstractController
     public function detalleClientes(): void
     {
         //cogemos lo recibido por GET
-<<<<<<< HEAD
         $id = (int) $_GET["id"];
         //Instanciamos al modelo para gestionar los datos
         $clientes = new Clientes();
-=======
-        $id = $_GET["id"];
-        //Instanciamos al modelo para gestionar los datos
-        $pedido = new Pedido();
->>>>>>> 8b8824eb6a0d191579b9433526a7fe4aba5b2c47
         //Para este controller utilizaremos otra plantilla detallecliente.html.twig
         $this->render(
             'detallecliente.html.twig',
             [
-<<<<<<< HEAD
                 'title' => 'Detalles del cliente',
                 'title_first_page' => 'GEORGI PACKAGES',
                 'clientes' => $clientes->getClienteById($id)
-=======
-                'title' => 'Detalles del pedido',
-                'title_first_page' => 'GEORGI PACKAGES',
-                'pedidos' => $pedido->getPedidoById($id)
->>>>>>> 8b8824eb6a0d191579b9433526a7fe4aba5b2c47
             ]
         );
     }
