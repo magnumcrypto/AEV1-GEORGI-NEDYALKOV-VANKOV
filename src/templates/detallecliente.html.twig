@@ -45,15 +45,15 @@
                                                     {% for cliente in clientes %}
             											    <tr>
             											        <td>{{ cliente.CLIENTE_COD  }}</td>
-            											        <td>{{ cliente.NOMBRE  }}</td>
-            											        <td>{{ cliente.DIREC  }}</td>
-            											        <td>{{ cliente.CIUDAD  }}</td>
+            											        <td>{{ cliente.NOMBRE|capitalize  }}</td>
+            											        <td>{{ cliente.DIREC|capitalize  }}</td>
+            											        <td>{{ cliente.CIUDAD|capitalize  }}</td>
             											        <td>{{ cliente.ESTADO  }}</td>
             											        <td>{{ cliente.COD_POSTAL }}</td>
             											        <td>{{ cliente.AREA  }}</td>
             											        <td>{{ cliente.REPR_COD  }}</td>
             											        <td>{{ cliente.LIMITE_CREDITO|format_currency('EUR') }}</td>
-            											        <td>{{ cliente.OBSERVACIONES  }}</td>
+            											        <td>{{ cliente.OBSERVACIONES|capitalize  }}</td>
             											    </tr>
             											{% endfor %}
         											</tbody>

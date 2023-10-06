@@ -45,10 +45,6 @@ class Dispatcher
         //Comprobamos que se han enviado o no parámetros por la ruta y lanzamos la accion del controller
         //Si no hay parámetros son null
         (!is_null($this->currentRequest->getParams())) ? $params = $this->currentRequest->getParams() : $params = null;
-        echo "Parametros: ";
-        var_dump($params) . "\n";
-        echo "Ruta: ";
-        var_dump($this->currentRequest->getRoute());
         //Instanciamos el controlador que toca
         $controller = new $controllerClass();
         //Ahora ejecutamos el método asociado a la ruta y le pasamos los parámetros

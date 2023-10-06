@@ -1,0 +1,84 @@
+{% extends "layout.html.twig" %}
+
+{% block navmenu %}
+						<div class="row-2">
+							<ul>
+								<li class="m1">
+									<a href="/">Home</a>
+								</li>
+								<li class="m2">
+									<a href="/listaProductos">Productos</a>
+								</li>
+								<li class="m3">
+									<a href="/listaClientes">Clientes</a>
+								</li>
+								<li class="m4">
+									<a href="/departamentos">Departamentos</a>
+								</li>
+								<li class="m5">
+									<a href="/pedidos" class="active">Pedidos</a>
+								</li>
+							</ul>
+						</div>
+{% endblock %}
+{% block content %}
+					<!-- CONTENT -->
+					<div id="content">
+						<div class="inner_copy">More
+							<a href="#">Website Templates</a>
+							@ Templates.com!</div>
+						<div class="div-clientes">
+							<div class="wrapper">
+								<div class="col-1">
+									<div class="indent">
+										<div class="indent1">
+											<h3>{{ title }}</h3>
+                                                        <form action="/pedidos/?id={{cliente.CLIENTE_COD}}" method="post">
+                                                        <div class="dropdown dropdown-dark">
+                                                            <select name="cliente" class="dropdown-select">
+                                                                    <option value="todos">Selecciona un cliente</option>
+                                                                    {% for cliente in clientes %}
+                                                                        <option value={{cliente.CLIENTE_COD}}>{{cliente.CLIENTE_COD}} - {{cliente.NOMBRE|capitalize}}</option>
+                                                                    {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                    <input class="btn-submit" type="submit" value="Enviar">
+                                                    <table class="clientes-table">
+    												<thead>
+            												<tr>
+                												<th>Número Pedido</th>
+                												<th>Pedido fecha</th>
+                												<th>Tipo pedido</th>
+                												<th>Código cliente</th>
+                												<th>Fecha envío</th>
+                												<th>TOTAL</th>
+            												</tr>
+        											</thead>
+        											<tbody>
+                                                    {% for pedido in pedidos %}
+            											    <tr>
+            											        <td>{{ pedido.PEDIDO_NUM }}</td>
+            											        <td>{{ pedido.PEDIDO_FECHA|date('d/m/Y') }}</td>
+            											        <td>{{ pedido.PEDIDO_TIPO }}</td>
+            											        <td>{{ pedido.CLIENTE_COD }}</td>
+            											        <td>{{ pedido.FECHA_ENVIO|date('d/m/Y') }}</td>
+            											        <td>{{ pedido.TOTAL|format_currency('EUR') }}</td>
+            											    </tr>
+            											{% endfor %}
+        											</tbody>
+    											</table>
+										</div>
+									</div>
+								</div>
+								<div class="col-2">
+									</ul>
+								<div class="col-2">
+									<ul>
+										<li>
+											<strong>
+												<a href="#">{{fecha_actual|date('d/m/Y') }}</a>
+												<a href="#">{{fecha_actual|date('H:i:s') }}</a>
+											</strong>Actualizamos siempre la fecha actual!.
+                                        </li>
+									</ul>
+{% endblock %} 

@@ -10,9 +10,8 @@ use AEV1\Models\Empleados;
 //Controllador que se encargara de obtener la lista de empleados
 class EmpleadosController extends AbstractController
 {
-
     //En este caso no sabemos si se quiere solo una lista de clientes según
-    //el departamento o si no se pasa ningun parametro listarlos todos
+    //el departamento o si no se pasa ningun parametro correcto listarlos todos
     public function listadoEmpleados(): void
     {
         //Cogemos si hay, datos por GET

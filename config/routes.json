@@ -22,5 +22,9 @@
     "/empleados": {
         "controller": "EmpleadosController",
         "action": "listadoEmpleados"
+    },
+    "/pedidos": {
+        "controller": "PedidosController",
+        "action": "listadoPedidos"
     }
 }

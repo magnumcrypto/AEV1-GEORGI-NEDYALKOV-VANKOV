@@ -16,10 +16,7 @@
 									<a href="/departamentos" class="active">Departamentos</a>
 								</li>
 								<li class="m5">
-									<a href="contact-us.html">contacts</a>
-								</li>
-								<li class="m6">
-									<a href="sitemap.html">Sitemap</a>
+									<a href="/pedidos">Pedidos</a>
 								</li>
 							</ul>
 						</div>
@@ -49,8 +46,8 @@
                                                     {% for departamento in departamentos %}
             											    <tr>
             											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.DEPT_NO  }}</td>
-            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.DNOMBRE  }}</td>
-            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.LOC  }}</td>
+            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.DNOMBRE|capitalize  }}</td>
+            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.LOC|capitalize  }}</td>
             											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.color|capitalize }}</td>
             											    </tr>
             											{% endfor %}

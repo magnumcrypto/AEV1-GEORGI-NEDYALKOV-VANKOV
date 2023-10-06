@@ -16,10 +16,7 @@
 									<a href="/departamentos">Departamentos</a>
 								</li>
 								<li class="m5">
-									<a href="contact-us.html">contacts</a>
-								</li>
-								<li class="m6">
-									<a href="sitemap.html">Sitemap</a>
+									<a href="/pedidos">Pedidos</a>
 								</li>
 							</ul>
 						</div>
@@ -47,9 +44,9 @@
         											<tbody>
                                                     {% for cliente in clientes %}
             											    <tr>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.CLIENTE_COD  }}</a></td>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.NOMBRE  }}</a></td>
-            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.DIREC  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.CLIENTE_COD|capitalize  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.NOMBRE|capitalize  }}</a></td>
+            											        <td><a href="/detalleCliente/?id={{ cliente.CLIENTE_COD }}">{{ cliente.DIREC|capitalize  }}</a></td>
             											    </tr>
             											{% endfor %}
         											</tbody>

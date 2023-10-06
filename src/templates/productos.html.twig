@@ -16,10 +16,7 @@
 									<a href="/departamentos">Departamentos</a>
 								</li>
 								<li class="m5">
-									<a href="contact-us.html">contacts</a>
-								</li>
-								<li class="m6">
-									<a href="sitemap.html">Sitemap</a>
+									<a href="/pedidos">Pedidos</a>
 								</li>
 							</ul>
 						</div>
@@ -48,7 +45,7 @@
             											{% for producto in productos %}
             											    <tr>
             											        <td>{{ producto.PROD_NUM }}</td>
-            											        <td>{{ producto.DESCRIPCION }}</td>
+            											        <td>{{ producto.DESCRIPCION|capitalize }}</td>
             											    </tr>
             											{% endfor %}
         											</tbody>
