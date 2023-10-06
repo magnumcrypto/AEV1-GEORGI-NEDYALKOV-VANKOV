@@ -18,5 +18,9 @@
     "/departamentos": {
         "controller": "DepartamentosController",
         "action": "listadoDepartamentos"
+    },
+    "/empleados": {
+        "controller": "EmpleadosController",
+        "action": "listadoEmpleados"
     }
 }

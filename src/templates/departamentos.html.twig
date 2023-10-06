@@ -48,10 +48,10 @@
         											<tbody>
                                                     {% for departamento in departamentos %}
             											    <tr>
-            											        <td>{{ departamento.DEPT_NO  }}</td>
-            											        <td>{{ departamento.DNOMBRE  }}</td>
-            											        <td>{{ departamento.LOC  }}</td>
-            											        <td>{{ departamento.color|capitalize }}</td>
+            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.DEPT_NO  }}</td>
+            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.DNOMBRE  }}</td>
+            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.LOC  }}</td>
+            											        <td><a href="/empleados/?id={{ departamento.DEPT_NO }}">{{ departamento.color|capitalize }}</td>
             											    </tr>
             											{% endfor %}
         											</tbody>

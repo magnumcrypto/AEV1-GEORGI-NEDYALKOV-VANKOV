@@ -10,7 +10,6 @@ use AEV1\Models\Departamentos;
 //Controllador que se encargara de obtener la lista de departamentos
 class DepartamentosController extends AbstractController
 {
-
     //En este caso vamos a querer todos los datos
     public function listadoDepartamentos(): void
     {

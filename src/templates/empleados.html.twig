@@ -1,0 +1,65 @@
+{% extends "layout.html.twig" %}
+
+{% block navmenu %}
+						<div class="row-2">
+							<ul>
+								<li class="m1">
+									<a href="/">Home</a>
+								</li>
+								<li class="m3">
+									<a href="/departamentos">Volver a departamentos</a>
+								</li>
+							</ul>
+						</div>
+{% endblock %}
+{% block content %}
+					<!-- CONTENT -->
+					<div id="content">
+						<div class="inner_copy">More
+							<a href="#">Website Templates</a>
+							@ Templates.com!</div>
+						<div class="div-clientes">
+							<div class="wrapper">
+								<div class="col-1">
+									<div class="indent">
+										<div class="indent1">
+                                            {% if id_dep == 40 %}
+                                                <h3>Detalles de TODOS los empleados</h3>
+                                                {% else %}
+                                                    <h3>{{ title }} {{ id_dep }}</h3>
+                                            {% endif %}
+												<table class="clientes-table">
+    												<thead>
+            												<tr>
+                												<th>Número empleado</th>
+                												<th>Apellido</th>
+                												<th>Oficio</th>
+                												<th>Número Jefe</th>
+                												<th>Fecha alta</th>
+                												<th>Salario</th>
+                												<th>Comisión</th>
+                												<th>Número deprtamento</th>
+            												</tr>
+        											</thead>
+        											<tbody>
+                                                    {% for emplado in empleados %}
+            											    <tr>
+            											        <td>{{ emplado.EMP_NO  }}</td>
+            											        <td>{{ emplado.APELLIDOS|capitalize }}</td>
+            											        <td>{{ emplado.OFICIO|capitalize  }}</td>
+            											        <td>{{ emplado.JEFE  }}</td>
+            											        <td>{{ emplado.FECHA_ALTA|date('d/m/Y') }}</td>
+            											        <td>{{ emplado.SALARIO|format_currency('EUR') }}</td>
+            											        <td>{{ emplado.COMISION|format_currency('EUR')  }}</td>
+            											        <td>{{ emplado.DEPT_NO  }}</td>
+            											    </tr>
+            											{% endfor %}
+        											</tbody>
+    											</table>
+												
+										</div>
+									</div>
+								</div>
+								<div class="col-2">
+									</ul>
+{% endblock %}   
